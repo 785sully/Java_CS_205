@@ -1,0 +1,57 @@
+/**************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 8.6
+ * LLBankCustomer.java
+ *
+ */
+public class LLBankCustomer {
+	/*
+	 * make constructor
+	 * override string
+	 * getter/setters
+	 */
+	private long acctNum;
+	private String name;
+	private String phoneNum;
+	private double balance;
+	
+	//start of getters/setters
+	
+	public void setAcctNum(long number){
+		acctNum = number;
+	}
+	
+	public long getAcctNum(){
+		return acctNum;
+	}
+	
+	public void setName(String newName){
+		name = newName;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setPhoneNum(String newPhoneNum){
+		phoneNum = newPhoneNum;
+	}
+	
+	public String getPhoneNum(){
+		return phoneNum;
+	}
+	
+	public double getBalance(){
+		return balance;
+	}
+	
+	public void setBalance(double newBalance){
+		balance = newBalance;
+	}//end of Setter/Getters
+	
+	
+	
+	
+}//end of LLBankCustomer class

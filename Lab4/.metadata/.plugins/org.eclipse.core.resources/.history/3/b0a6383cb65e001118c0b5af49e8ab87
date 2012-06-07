@@ -1,0 +1,36 @@
+/************************
+ * 
+ * @author Josh Lake
+ * CS205
+ * PP 6.22
+ * 
+ *  SumProduct.java
+ *  
+ *  Dialog boxes to gather two integers displays sum and product, asks to continue
+ *
+ ***********************/
+import javax.swing.JOptionPane;
+
+public class SumProduct {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JOptionPane.showMessageDialog(null, message, "Welcome to Fall Festival", JOptionPane.INFORMATION_MESSAGE );
+		
+		do 
+		{
+			
+			
+			// Children input Box
+			numStr = JOptionPane.showInputDialog(
+					"Welcome to Fall Fesitval Please enter the number of children in your party:");
+		
+		
+		
+		
+		
+		
+	}//end of main
+
+}//end of class SumProduct

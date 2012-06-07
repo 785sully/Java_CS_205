@@ -1,0 +1,48 @@
+/************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * TwelveDays.java
+ * PP 6.10
+ * 
+ * Prints the verses of the Twelve Days of Christmas
+ *
+ ***********************/
+public class TwelveDays {
+
+	public static void main(String[] args) {
+		// TODO Switch statement to control verses, avoid break statement?
+		//case statements should go in reverse order then, so that they print downward
+		//
+		
+		int dayOfChristmas = 0;
+		
+		while(dayOfChristmas <= 12){
+			System.out.println("On the " + dayOfChristmas );
+					switch(dayOfChristmas){ //checks for Xst, Xnd, Xrd to append to dayOfChristmas
+						case (1):			
+							System.out.print("st ");
+						case (2):
+							System.out.print("nd ");
+						case (3):
+							System.out.print("rd ");
+						default:
+							System.out.print("th ");
+					}		
+			System.out.println("day of Christmas my true love gave to me.");
+		
+			switch(dayOfChristmas){ //this switch prints out verse based on the day
+			
+			case(12):
+				System.out.println("");
+			
+			}//end of switch
+			
+		
+			
+		dayOfChristmas++;	
+		}//end of while loop	
+
+	}//end of main
+
+}//end of class TwelveDays

@@ -1,0 +1,157 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Final Project
+ * GameDriver.java
+ * 
+ * Has a few of the creature objects fight each other. displays results in a JFrame
+ *
+ */
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.*;
+
+import javax.swing.*;
+import javax.swing.border.*;
+
+
+public class GameDriver extends JFrame{
+	
+	//constructor
+	GameDriver(){
+		//example of Composition	
+					//(String name, int health, int attackStrength, int armorLevel, int level, int weaponLevel)
+		noobWarrior = new Warrior("Noob", 50, 2, 2, 7, 1);
+								//String name, int health, int attackStrength, int gold, int treasureLevel)
+		greenSlime = new GreenSlime("Slimer", 75, 6, 14, 1);
+		
+		setTitle("Dungeon Battle");
+		setLayout(new BorderLayout());
+		setSize(200, 150);
+		Container contentPane = getContentPane();
+		
+		//top panel has both creature info
+		//left section and right section
+		//each section has:
+		//Name
+		//Health
+		//room to add more stats if needed later
+		
+		topLeftPanel = new JPanel(new GridLayout(4,1)); 
+		leftName = new JLabel("   " + noobWarrior.getName());						
+		leftHealth = new JLabel("Health: " + noobWarrior.getHealth());
+		leftArmor = new JLabel("Armor Lvl: " + noobWarrior.getArmorLevel());
+		leftStrength = new JLabel("Strength: " + noobWarrior.getAttackStrength());
+		
+		topLeftPanel.add(leftName);
+		topLeftPanel.add(leftHealth);
+		topLeftPanel.add(leftArmor);
+		topLeftPanel.add(leftStrength);
+		topLeftPanel.setBorder (BorderFactory.createLineBorder(Color.GREEN));
+		
+		topRightPanel = new JPanel(new BorderLayout());
+		rightName = new JLabel(greenSlime.getName()+"   " );
+		rightHealth = new JLabel("Health: " + greenSlime.getHealth());
+		
+		topRightPanel.add(rightName, BorderLayout.NORTH);
+		topRightPanel.add(rightHealth, BorderLayout.SOUTH);
+		topRightPanel.setBorder(BorderFactory.createLineBorder(Color.RED));
+		
+		topPanel = new JPanel(new BorderLayout());
+		topPanel.add(topLeftPanel, BorderLayout.WEST);
+		topPanel.add(topRightPanel, BorderLayout.EAST);
+		
+		//middlePanel has the "Fight button"
+		middlePanel = new JPanel(new FlowLayout());
+		fight = new JButton("Fight");
+		
+		ButtonListener listener = new ButtonListener();
+		fight.addActionListener(listener);
+		middlePanel.add(fight);
+		
+		
+		//bottomPanel displays the winner of the battle
+		bottomPanel = new JPanel(new BorderLayout());
+		leftWinner = new JLabel("     ");
+		rightWinner = new JLabel("     ");
+		bottomPanel.add(leftWinner, BorderLayout.WEST);
+		bottomPanel.add(rightWinner, BorderLayout.EAST);
+		
+		
+		//contentPane
+		contentPane.add(topPanel, BorderLayout.NORTH);
+		contentPane.add(middlePanel, BorderLayout.CENTER);
+		contentPane.add(bottomPanel, BorderLayout.SOUTH);
+		
+		addWindowListener(new WindowAdapter(){
+			public void windowClosing(WindowEvent e){
+				System.exit(0);
+			}//end WindowClosing
+		});//end Listener
+	
+	
+	
+	}//end of constructor
+	static JPanel topPanel;
+	static JPanel topLeftPanel;
+	static JPanel topRightPanel;
+	static JPanel middlePanel;
+	static JPanel bottomPanel;
+	static JButton fight;
+	static JLabel leftName;
+	static JLabel rightName;
+	static JLabel leftHealth;
+	static JLabel rightHealth;
+	static JLabel leftWinner;
+	static JLabel rightWinner;
+	static JLabel leftArmor;
+	static JLabel leftStrength;
+	
+	private Warrior noobWarrior;
+	private GreenSlime greenSlime;
+	
+	public static void main(String[] args) {
+		
+		
+		JFrame  frame = new GameDriver();
+		frame.setVisible(true);
+
+	}//end of main
+	
+	//listener for the "fight" button
+	private class ButtonListener implements ActionListener{
+		public void actionPerformed(ActionEvent event){
+			if(event.getSource() == fight){
+				//call the fight() method
+				while((noobWarrior.getHealth() > 0) && (greenSlime.getHealth() > 0)){
+				fight(noobWarrior, greenSlime);
+				//display results to Panels
+				leftHealth.setText("Health: " + noobWarrior.getHealth());
+				rightHealth.setText("Health: " + greenSlime.getHealth());
+				if(noobWarrior.getHealth()<= 0){
+					rightWinner.setText("Winner!");
+				}
+				else if(greenSlime.getHealth()<= 0){
+					leftWinner.setText("Winner!");
+				}
+					
+				
+				}//end while loop
+			}//end of if "fight button"
+		}//end actionPerfomed
+	}//end ButtonListener class
+	public void fight(Warrior good, GreenSlime bad){//creatures take turns attacking, does order matter?
+		
+		bad.setHealth(bad.getHealth()-good.attack());//reduces bad's health by good's attack
+		good.setHealth(good.getHealth()-(bad.attack()/*-good.getArmorLevel()*/)); //reduces good's health by bad's attack minus good's armor level
+		//should this somehow check when the life total reaches zero or should that happen in the button listener?
+		
+		
+	}//end of fight method
+	
+	
+}//end of GameDriver class

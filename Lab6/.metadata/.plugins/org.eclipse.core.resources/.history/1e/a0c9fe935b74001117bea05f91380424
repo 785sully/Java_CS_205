@@ -1,0 +1,15 @@
+/**
+ * Josh Lake
+ * CS205
+ * 
+ */
+
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TextAreaPanel {
+
+}

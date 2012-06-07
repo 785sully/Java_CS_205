@@ -1,0 +1,31 @@
+/********************************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Project 1
+ *
+ ********************************************/
+import java.util.Scanner;
+
+
+public class FestivalAdmission {
+
+	final int CHILD_LIMIT = 50;
+    final int ADULT_LIMIT = 200;
+    final int SENIOR_LIMIT = 100;
+    final int TOT_LIMIT = 300;
+    final double GRAND_AMT = 2500.00;
+    final double TICKET = 10.00;
+    
+	Scanner stdin = new Scanner(System.in);
+    
+    
+	public static void main(String[] args) {
+		
+
+		
+		// T//Beginning of flag-controlled while loop
+
+	}//end of main
+
+}//end of FestivalAdmission Class

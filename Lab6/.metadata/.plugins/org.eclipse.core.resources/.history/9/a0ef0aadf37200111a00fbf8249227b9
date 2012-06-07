@@ -1,0 +1,59 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 4.15
+ * IncrementDecrementPanel.java
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class IncrementDecrementPanel extends JPanel{
+
+	private int count;
+	private JButton plusButton;
+	private JButton minusButton;
+	private JLabel label;
+	
+	public IncrementDecrementPanel(){
+		
+		count = 50;
+		
+		plusButton = new JButton ("Increment!");
+		plusButton.addActionListener(new ButtonListenerPlus());
+		minusButton = new JButton ("Decrement!");
+		minusButton.addActionListener(new ButtonListenerMinus());
+		
+		label = new JLabel ("Value: " + count);
+		
+		add (plusButton);
+		add (minusButton);
+		add (label);
+		
+		setPreferredSize (new Dimension(300,60));
+		setBackground (Color.cyan);	
+	}//end of Constructor
+	
+	//PlusButton Action Listener
+	private class ButtonListenerPlus implements ActionListener{
+	
+	public void actionPerformed (ActionEvent event){
+		
+		count++;
+		label.setText("Value: "+ count);
+		}
+	}//end of actionPerformed method
+	
+	//MinusButton Action Listener
+	private class ButtonListenerMinus implements ActionListener{
+		
+	public void actionPerformed (ActionEvent event){
+			
+		count--;
+		label.setText("Value: "+ count);
+		}	
+	}//end of actionPerformed method
+	
+}//end of IncrementDecrementPanel

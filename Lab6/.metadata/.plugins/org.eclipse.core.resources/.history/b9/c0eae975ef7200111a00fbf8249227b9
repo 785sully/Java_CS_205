@@ -1,0 +1,29 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 4.13
+ * FarenheitPanel.java
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class FahrenheitPanel extends JPanel{
+	
+	private JLabel inputLabel, outputLabel, resultLabel;
+	private JTextField fahrenheit;
+	private JButton Button1;
+	
+	public FarenheitPanel(){
+		inputLabel = new JLabel ("Enter Fahrenheit temperature:");
+		outputLabel = new JLabel ("Temperature in Celsius: ");
+		resultLabel = new JLabel ("---");
+		
+		fahrenheit
+		
+	}//end of Constructor
+	
+
+}//end of FarenheitPanel class

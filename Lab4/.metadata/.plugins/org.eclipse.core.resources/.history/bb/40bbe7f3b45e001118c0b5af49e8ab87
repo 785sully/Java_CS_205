@@ -1,0 +1,22 @@
+/************************
+ * 
+ * @author Josh Lake
+ * CS205
+ * PP 6.22
+ * 
+ *  SumProduct.java
+ *  
+ *  Dialog boxes to gather two integers displays sum and product, asks to continue
+ *
+ ***********************/
+
+
+public class SumProduct {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

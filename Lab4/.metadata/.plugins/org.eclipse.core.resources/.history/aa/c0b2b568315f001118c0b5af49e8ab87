@@ -1,0 +1,46 @@
+/*********************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 4.4
+ * BoxTest.java
+ * Driver class for the Box object from Box.java
+ *
+ *********************/
+
+import java.util.Random;
+
+public class BoxTest {
+
+	public static void main(String[] args) {
+		// TODO Instantiate and update several Box objects
+		
+		final int MAX_SIZE = 10;//constant used for maximum box dimensions
+		Random randomInt = new Random();//makes a random Int that is used for the box dimensions
+		
+		Box box1 = new Box((randomInt.nextInt(MAX_SIZE)+1), (randomInt.nextInt(MAX_SIZE)+1), (randomInt.nextInt(MAX_SIZE)+1));//makes the box dimensons 1-10 randomly
+		Box box2 = new Box((randomInt.nextInt(MAX_SIZE)+1), (randomInt.nextInt(MAX_SIZE)+1), (randomInt.nextInt(MAX_SIZE)+1));
+		Box box3 = new Box((randomInt.nextInt(MAX_SIZE)+1), (randomInt.nextInt(MAX_SIZE)+1), (randomInt.nextInt(MAX_SIZE)+1));
+		
+		//output the current box dimensions before we change them
+		System.out.println(box1 + "\n");
+		System.out.println(box2 + "\n");
+		System.out.println(box3 + "\n");
+		System.out.println("*********************");
+		
+		//change the box dimensions
+		box1.setHeight((randomInt.nextInt(MAX_SIZE)+1));
+		box2.setDepth((randomInt.nextInt(MAX_SIZE)+1));
+		box3.setWidth((randomInt.nextInt(MAX_SIZE)+1));
+		box1.fillBox(true);
+		box3.fillBox(true);
+		
+		//output the modified box dimensions
+		System.out.println(box1 + "\n");
+		System.out.println(box2 + "\n");
+		System.out.println(box3 + "\n");
+		System.out.println("*********************");
+		
+	}//end of main
+
+}//end of Class BoxTest

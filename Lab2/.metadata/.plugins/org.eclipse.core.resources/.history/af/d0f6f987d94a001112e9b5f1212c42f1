@@ -1,0 +1,33 @@
+/*****************************************
+ * PhoneNumber.java
+ * @author Josh Lake
+ * CS 205
+ * Lab 02
+ * PP 3.3
+ *
+ *****************************************/
+import java.util.Random;
+
+public class PhoneNumber {
+
+	
+	public static void main(String[] args) {
+		
+		Random randomInt = new Random();
+		
+		/*Generates Random phone number 
+		with no 8s or 9s in Area Code, 
+		and nothing greater than 742 in next three digits
+		*/
+		System.out.println(/*(randomInt.nextInt(7) 
+							randomInt.nextInt(7)
+							randomInt.nextInt(7)*/
+							 "-"
+							+ randomInt.nextInt(742)
+							+ "-"
+							+ randomInt.nextInt(9999));
+		
+
+	}
+
+}

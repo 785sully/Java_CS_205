@@ -1,0 +1,41 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 5.16
+ * TestStatsPanel.java
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TestStatsPanel  extends JPanel{
+	
+	//start of Constructor
+	public TestStatsPanel(){
+		
+		//Main Panel
+		JPanel primary = new JPanel();
+		
+		TextAreaPanel taPanel = new TextAreaPanel();
+		primary.add(taPanel);
+		
+		
+		primary.add(new StatsAreaPanel());
+		
+	}//end of TestStatsPanel Constructor
+	
+
+	
+}//end of TestStatsPanel class
+
+
+
+/*
+TitledBorder title;
+title = BorderFactory.createTitledBorder("stats box");
+jComp8.setBorder(title);
+
+*/

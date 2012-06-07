@@ -1,0 +1,20 @@
+/*************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 8.6
+ * LLBankDriver.java
+ *
+ */
+public class LLBankDriver {
+
+	public static void main(String[] args) {
+		// TODO make a menu that drives any of the methods:
+		// 1: Create acct
+		// 2: Deposit
+		// 3: Withdrawl
+		// 4: Calc Interest
+
+	}//end of main
+
+}//end of LLBankDriver class

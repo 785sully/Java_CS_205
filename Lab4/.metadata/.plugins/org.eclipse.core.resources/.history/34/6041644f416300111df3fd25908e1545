@@ -1,0 +1,22 @@
+/************************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Uses the Die class 
+ * to make an object of 2 Die Objects 
+ * with all needed getter/setter classes
+ *
+ ***********************************/
+import Lab5.Die.java;
+
+public class PairOfDice extends Die {
+
+Die die1 = new Die();
+Die die2 = new Die();
+
+
+	
+	
+	
+	
+}//end of PairOfDice class

@@ -1,0 +1,20 @@
+/*********************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 4.4
+ * BoxTest.java
+ * Driver class for the Box object from Box.java
+ *
+ *********************/
+public class BoxTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

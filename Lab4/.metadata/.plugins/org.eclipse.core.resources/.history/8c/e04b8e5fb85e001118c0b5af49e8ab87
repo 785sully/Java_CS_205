@@ -1,0 +1,62 @@
+/************************
+ * 
+ * @author Josh Lake
+ * CS205
+ * PP 6.22
+ * 
+ *  SumProduct.java
+ *  
+ *  Dialog boxes to gather two integers displays sum and product, asks to continue
+ *
+ ***********************/
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class SumProduct {
+
+
+	public static void main(String[] args) {
+		
+		int firstInt = 0;
+		int secondInt =0;
+		char continuecheck;
+		String numStr = "";
+		String message = "";
+		
+		Scanner stdin = new Scanner(System.in); //scanner for do-while loop
+		
+		
+		do // makes input boxes and Sum/Products them until the user quits
+		{
+			
+			// first input Box
+			numStr = JOptionPane.showInputDialog(
+					"Please enter the first Integer: ");
+			firstInt = Integer.parseInt(numStr);
+			
+			//Add error checking here
+			
+			// second input Box
+			numStr = JOptionPane.showInputDialog(
+					"Please enter the first Integer: ");
+			secondInt = Integer.parseInt(numStr);
+			
+			//Add error checking here
+			
+			// results box
+			message = "The sum of " + firstInt + " and " + secondInt + " equals: " + (firstInt + secondInt) + "\n"
+						+ " The product of " + firstInt + " and " + secondInt + " equals: " + (firstInt * secondInt);
+			
+			JOptionPane.showMessageDialog(null, message, "Sum and Product App", JOptionPane.INFORMATION_MESSAGE );
+			
+			
+		//enter somthing here, text in cmdline or dialog box that asks for continue char
+		}
+		while(continuecheck == 'y' || continuecheck == 'Y');
+		
+		
+		
+		
+	}//end of main
+
+}//end of class SumProduct

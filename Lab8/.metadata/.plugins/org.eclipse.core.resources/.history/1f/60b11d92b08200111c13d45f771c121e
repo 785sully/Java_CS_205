@@ -1,0 +1,17 @@
+/**************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 8.1
+ * CountIntegers.java
+ *
+ */
+public class CountIntegers {
+
+	
+	public static void main(String[] args) {
+		// TODO read arbitrary numbers
+
+	}
+
+}

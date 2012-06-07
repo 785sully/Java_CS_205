@@ -1,0 +1,62 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 5.16
+ * TestStatsPanel.java
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TestStatsPanel  extends JPanel{
+	
+	//variables
+	private JLabel numWordsLabel, aveWordLengthLabel, titleBoarder = new JLabel("Stats Area");
+	private JButton refreshButton;
+	private int numWords;
+	private int aveWordLength;
+	private JTextArea txtArea = new JTextArea(6,20);
+	
+	//start of Constructor
+	public TestStatsPanel(){
+		
+		//TextAreaPanel
+		JScrollPane scrollingArea = new JScrollPane(txtArea);
+		
+		//end of TxtArea
+		
+		
+		//Stats Area
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//Main Panel
+		JPanel primary = new JPanel();
+		primary.setBackground(Color.blue);
+		primary.add(txtArea);
+		primary.add(statsAreaPanel);
+		
+	}//end of TestStatsPanel Constructor
+	
+
+	
+}//end of TestStatsPanel class
+
+
+
+/*
+TitledBorder title;
+title = BorderFactory.createTitledBorder("stats box");
+jComp8.setBorder(title);
+
+*/

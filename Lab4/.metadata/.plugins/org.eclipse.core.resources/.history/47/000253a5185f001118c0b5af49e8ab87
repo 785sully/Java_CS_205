@@ -1,0 +1,80 @@
+/*****************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 4.4
+ * 
+ * Box Object for BoxTest Driver
+ * Has getters/setters and overwrites toString()
+ *****************/
+public class Box {
+	
+	private int height;
+	private int width;
+	private int depth;
+	private boolean full;
+	
+	//Box Constructor
+	Box(int height, int width, int depth){
+
+		this.height = height;		
+		this.width = width;
+		this. depth = depth;
+		full = false;
+		
+	}//end of Box constructor
+	
+	//start of Getters
+	public int getHeight(){
+		return height;
+	}
+	
+	public int getWidth(){
+		return width;
+	}
+	
+	public int getdepth(){
+		return depth;
+	}
+	
+	public boolean isFull(){
+		if (full)
+			return true;
+		else 
+			return false;
+	}
+	
+	
+	//start of Setters
+	public void setHeight(int newheight){
+		height = newheight;
+	}
+	
+	public void setWidth(int newWidth){
+		width = newWidth;
+	}
+	
+	public void setDepth(int newDepth){
+		depth = newDepth;
+	}
+	
+	public void fillBox(boolean fullBox){
+		if(fullBox)
+			full = true;
+	}
+	
+	//@toString() override
+	public String toString(){
+		return "The box demensions are: \n" +
+				"Height: " + height + "\n" +
+				"Width: " + width + "\n" +
+				"Depth: " + depth + "\n" +
+				"Volume: " + (height * width * depth) + "\n";
+				
+				if(full){
+					"The box is full.";
+				}	
+				else
+					"The box is empty";
+	}
+}

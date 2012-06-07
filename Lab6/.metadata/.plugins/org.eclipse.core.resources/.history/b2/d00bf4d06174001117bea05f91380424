@@ -1,0 +1,89 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 5.16
+ * TestStatsPanel.java
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TestStatsPanel  extends JPanel{
+	
+	//variables
+	private JLabel numWordsLabel, aveWordLengthLabel, titleBoarder = new JLabel("Stats Area");
+	private JButton refreshButton;
+	private int numWords;
+	private int aveWordLength;
+	private JTextArea txtArea = new JTextArea(6,15);
+	
+	//start of Constructor
+	public TestStatsPanel(){
+		
+		//TextAreaPanel
+		JScrollPane scrollingArea = new JScrollPane(txtArea);
+		
+		//end of TxtArea
+		
+		
+		//Stats Area
+		titleBoarder.setHorizontalAlignment(JLabel.CENTER);
+		
+		numWordsLabel = new JLabel ("Number of Words: " + numWords);
+		aveWordLengthLabel = new JLabel ("Average Word Length: " + aveWordLength);
+		refreshButton = new JButton ("Refresh");
+		refreshButton.addActionListener(new ButtonListener());
+		
+		
+		
+		
+		add (txtArea);
+		add (numWordsLabel);
+		add (aveWordLengthLabel);
+		add (refreshButton);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//Main Panel
+		//JPanel primary = new JPanel();
+		//primary.setBackground(Color.blue);
+		//primary.add(txtArea);
+		//primary.add(statsPanel);
+		
+	}//end of TestStatsPanel Constructor
+	
+		//ButtonListener
+		private class ButtonListener implements ActionListener{
+		
+		public void actionPerformed (ActionEvent event){
+			// add the String functions to get the variables here
+			//
+			//
+			//
+			
+			
+			numWordsLabel.setText("Number of Words: " + numWords);
+			aveWordLengthLabel.setText("Average Word Length: " + aveWordLength);
+			}//end of actionPerformed method
+	}//end of Button Listener
+
+	
+}//end of TestStatsPanel class
+
+
+
+/*
+TitledBorder title;
+title = BorderFactory.createTitledBorder("stats box");
+jComp8.setBorder(title);
+
+*/

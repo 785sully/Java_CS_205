@@ -1,0 +1,18 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 2.20
+ * BusinessCard.java
+ *
+ */
+import javax.swing.JApplet;
+import java.awt.*;
+
+public class BusinessCard extends JApplet{
+	
+	public void paint (Graphics page){
+		
+	}//end of paint
+
+}//end of BusinessCard class

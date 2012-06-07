@@ -1,0 +1,16 @@
+/*************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 8.6
+ * LLBankDriver.java
+ *
+ */
+public class LLBankDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}//end of main
+
+}//end of LLBankDriver class

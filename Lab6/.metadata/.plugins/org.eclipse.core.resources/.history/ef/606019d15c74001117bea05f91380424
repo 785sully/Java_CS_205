@@ -1,0 +1,45 @@
+/**
+ * 
+ * @author Josh Lake
+ *
+ */
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class StatsAreaPanel extends JPanel{
+
+	private JLabel numWordsLabel, aveWordLengthLabel;
+	private JButton refreshButton;
+
+	private int numWords;
+	private int aveWordLength;
+	
+	//Stats Panel
+	JPanel statsPanel = new JPanel();
+			
+	statsPanel.setBorder(BorderFactory.createTitledBorder("Stats Box"));
+	numWordsLabel = new JLabel ("Number of Words: " + numWords);
+	aveWordLengthLabel = new JLabel ("Average Word Length: " + aveWordLength);
+	refreshButton = new JButton ("Refresh");
+	refreshButton.addActionListener(new ButtonListener());
+			
+	statsPanel.add (numWordsLabel);
+	statsPanel.add (aveWordLengthLabel);
+	statsPanel.add (refreshButton);
+	
+	
+	private class ButtonListener implements ActionListener{
+		
+		public void actionPerformed (ActionEvent event){
+			
+			
+			
+			numWordsLabel.setText("Number of Words: " + numWords);
+			aveWordLengthLabel.setText("Average Word Length: " + aveWordLength);
+			}//end of actionPerformed method
+	}//end of Button Listener
+	
+}//end of StatsAreaPanel

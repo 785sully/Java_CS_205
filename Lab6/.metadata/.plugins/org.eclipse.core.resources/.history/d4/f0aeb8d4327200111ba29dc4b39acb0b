@@ -1,0 +1,45 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS205
+ * PP 2.17
+ * Balloons.java
+ * Constructs Various Colored balloons w/ a string attached
+ *
+ */
+
+import javax.swing.JApplet;
+import java.awt.*;
+import java.util.Random;
+
+public class Balloons extends JApplet{
+	
+	public void paint (Graphics page){
+	
+	final int BSIZE = 40; //sets size of balloon	
+	final int CENTER = 150; //sets beginning center line for balloon
+	final int MAX_NUMBER = 10; //maximum used for random number of balloons
+	
+	setBackground (Color.gray);
+	
+	Random randomInt = new Random();
+	int randomNum = randomInt.nextInt(MAX_NUMBER) + 1;
+	
+		while (randomNum > 0){ //loop to draw balloons
+			
+			page.setColor(Color.blue);
+			int vCenter = randomInt.nextInt(CENTER);//finds random vertical location of the balloon
+			int hCenter = randomInt.nextInt(CENTER);//finds random horizontal location of the balloon
+			int bStringLength = 30;//sets balloon string length
+			page.fillOval(vCenter, hCenter, BSIZE, BSIZE);
+			
+			page.setColor(Color.black);
+			page.drawLine(vCenter + (BSIZE/2),hCenter + BSIZE ,vCenter + (BSIZE/2), (hCenter + BSIZE + bStringLength) );
+			
+			
+			randomNum--;
+		}//end of while loop
+
+	}//end of paint
+	
+}//end of Balloons class

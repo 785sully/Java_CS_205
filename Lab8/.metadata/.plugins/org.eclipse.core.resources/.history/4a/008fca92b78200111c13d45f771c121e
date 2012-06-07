@@ -1,0 +1,22 @@
+/**************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 8.6
+ * LLBankCustomer.java
+ *
+ */
+public class LLBankCustomer {
+	/*
+	 * make constructor
+	 * override string
+	 * getter/setters
+	 */
+	private long acctNum;
+	private String name;
+	private String phoneNum;
+	private double balance;
+	
+	
+
+}//end of LLBankCustomer class

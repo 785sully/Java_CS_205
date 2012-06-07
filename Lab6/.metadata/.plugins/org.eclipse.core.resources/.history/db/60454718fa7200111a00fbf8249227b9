@@ -1,0 +1,21 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 5.16
+ * TestStatsPanel.java
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class TestStatsPanel {
+
+	public TestStatsPanel(){
+		
+		
+	}//end of TestStatsPanel Constructor
+	
+	
+}//end of TestStatsPanel class

@@ -1,0 +1,26 @@
+/********************
+ * 
+ * @author Josh Lake
+ * 
+ * CS 205
+ * Vowels.java
+ * PP6.9
+ * Reads String from stdin outputs the vowel count from that string
+ *
+ *******************/
+public class Vowels {
+
+	public static void main(String[] args) {
+		// TODO Create Scanner  
+		// make counter for each vowel
+		int counterA = 0;
+		int counterE = 0;
+		int counterI = 0;
+		int counterO = 0;
+		int counterU = 0;
+		
+		Scanner 
+
+	}
+
+}

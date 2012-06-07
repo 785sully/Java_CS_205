@@ -1,0 +1,45 @@
+/************************
+ * 
+ * @author Josh Lake
+ * CS205
+ * PP 6.22
+ * 
+ *  SumProduct.java
+ *  
+ *  Dialog boxes to gather two integers displays sum and product, asks to continue
+ *
+ ***********************/
+import javax.swing.JOptionPane;
+
+public class SumProduct {
+
+
+	public static void main(String[] args) {
+		
+		int firstInt = 0;
+		int secondInt =0;
+		String numStr = "";
+		
+		
+		JOptionPane.showMessageDialog(null, message, "Integer Adder/Multiplier", JOptionPane.INFORMATION_MESSAGE );
+		
+		do 
+		{
+			
+			
+			// first input Box
+			numStr = JOptionPane.showInputDialog(
+					"Please enter the first Integer: ");
+			
+			
+			
+		//enter somthing here, text in cmdline or dialog box that asks for continue char
+		}
+		while()
+		
+		
+		
+		
+	}//end of main
+
+}//end of class SumProduct

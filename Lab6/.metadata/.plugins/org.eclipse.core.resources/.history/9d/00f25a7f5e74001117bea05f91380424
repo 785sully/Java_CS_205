@@ -1,0 +1,24 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 5.16
+ * TestStats.java
+ *
+ */
+import javax.swing.JFrame;
+
+public class TestStats {
+
+public static void main(String[] args){
+		
+		JFrame frame = new JFrame ("Test Stats");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().add(new TestStatsPanel());
+		frame.pack();
+		frame.setVisible(true);
+		
+	}//end of main
+	
+	
+}//end of TestStats

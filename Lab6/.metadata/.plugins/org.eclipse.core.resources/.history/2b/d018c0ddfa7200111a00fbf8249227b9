@@ -1,0 +1,46 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 5.16
+ * TestStatsPanel.java
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TestStatsPanel {
+	
+	private JLabel numWordsLabel, aveWordLengthLabel;
+	private JButton refreshButton;
+	
+	private int numWords;
+	private int aveWordLength;
+	
+	
+	
+	public TestStatsPanel(){
+		
+		numWordsLabel = new JLabel ("Number of Words: " + numWords);
+		aveWordLengthLabel = new JLabel ("Average Word Length: " + aveWordLength);
+		refreshButton = new JButton ("Increment!");
+		refreshButton.addActionListener(new ButtonListener());
+		
+		
+		
+	}//end of TestStatsPanel Constructor
+	
+	private class ButtonListener implements ActionListener{
+		
+		public void actionPerformed (ActionEvent event){
+			
+			
+			
+			numWordsLabel.setText("Number of Words: " + numWords);
+			aveWordLenghtLabel.setText("Average Word Length: " + aveWordLength);
+			}//end of actionPerformed method
+	
+	
+}//end of TestStatsPanel class

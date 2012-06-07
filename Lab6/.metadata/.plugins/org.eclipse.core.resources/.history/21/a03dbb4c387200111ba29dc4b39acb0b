@@ -1,0 +1,34 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 2.20
+ * BusinessCard.java
+ *
+ */
+import javax.swing.JApplet;
+import java.awt.*;
+
+public class BusinessCard extends JApplet{
+	
+	public void paint (Graphics page){
+		
+		//Card
+		page.setColor(Color.white);
+		page.drawRect(0, 0, 150, 50);
+		
+		
+		//Card Text
+		page.setColor(Color.black);
+		page.drawString("Josh Lake",5,5);
+		
+		//Card Graphic
+		
+	
+	
+	
+	
+	
+	}//end of paint
+
+}//end of BusinessCard class

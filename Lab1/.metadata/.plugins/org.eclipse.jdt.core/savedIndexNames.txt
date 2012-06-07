@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+/Users/world/Documents/Java205/Lab1/.metadata/.plugins/org.eclipse.jdt.core
+3398712648.index

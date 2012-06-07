@@ -1,0 +1,34 @@
+import java.awt.BorderLayout;
+import java.awt.Container;
+
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Final Project
+ * GameDriver.java
+ * 
+ * Uses the Battle class to have a few of the creature objects fight each other.
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class GameDriver {
+	
+	//constructor
+	GameDriver(){
+		setTitle("Dungeon Battle");
+		setLayout(new BorderLayout());
+		setSize(400, 150);
+		Container contentPane = getContentPane();
+	}//end of constructor
+
+	
+	public static void main(String[] args) {
+		// TODO instantiate the Battle object and have a few battles of different creature objects
+
+	}//end of main
+
+}//end of GameDriver class

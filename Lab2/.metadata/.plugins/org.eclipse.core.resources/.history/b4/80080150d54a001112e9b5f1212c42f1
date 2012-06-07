@@ -1,0 +1,46 @@
+/*****************************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Lab 02
+ * PP 3.1
+ *
+ *****************************************/
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class UserNameGenerator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		String lName, fName, logIn;
+		
+		Scanner scan = new Scanner (System.in);
+		
+		System.out.println("What is your first name? ");
+		fName = scan.next();
+		
+		System.out.println("What is your last name? ");
+		lName = scan.next();
+		
+		
+		logIn = (fName.substring(0) + lName.substring(0, 5));
+		
+		Random generator = new Random();
+		
+		
+		//out puts the generated Log In with a random # 10-99
+		System.out.println("Your LogIn is: " 
+							+ logIn 
+							+ (generator.nextInt(89) + 10));
+		
+		
+		
+
+	}//end main
+
+}//end class

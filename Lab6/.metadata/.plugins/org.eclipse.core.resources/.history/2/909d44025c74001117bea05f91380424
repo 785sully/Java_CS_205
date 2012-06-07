@@ -1,0 +1,30 @@
+/**
+ * 
+ * @author Josh Lake
+ *
+ */
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import TestStatsPanel.ButtonListener;
+
+public class StatsAreaPanel extends JPanel{
+
+	//Stats Panel
+	JPanel statsPanel = new JPanel();
+			
+	statsPanel.setBorder(BorderFactory.createTitledBorder("Stats Box"));
+	numWordsLabel = new JLabel ("Number of Words: " + numWords);
+	aveWordLengthLabel = new JLabel ("Average Word Length: " + aveWordLength);
+	refreshButton = new JButton ("Refresh");
+	refreshButton.addActionListener(new ButtonListener());
+			
+	statsPanel.add (numWordsLabel);
+	statsPanel.add (aveWordLengthLabel);
+	statsPanel.add (refreshButton);
+	
+	
+}//end of StatsAreaPanel

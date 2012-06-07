@@ -1,0 +1,12 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * BattleEngine.java
+ * 
+ * This class is used to allow the creature objects to fight each other
+ *
+ */
+public class BattleEngine {
+
+}//end of BattleEngine class

@@ -1,0 +1,114 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 7.5
+ * TaskDriver.java
+ *
+ */
+//imports are from unfinished experiment pasted at bottom
+//import java.util.Scanner;
+//import java.util.ArrayList;
+
+public class TaskDriver {
+
+	public static void main(String[] args) {
+		
+		Task t1, t2, t3;
+		
+		t1 = new Task ("Do Laundry", 1);
+		
+		t2 = new Task ("Wash Dishes", 2);
+		
+		t3 = new Task ("Take Shower", 3);
+		
+		System.out.println(t1);
+		System.out.println(t2);
+		System.out.println(t3);
+		System.out.println("**********");
+		System.out.println();
+		
+		//change up the priority
+		t1.setPriority(7);
+		t2.setPriority(6);
+		t3.setPriority(1);
+		
+		t1.setTask("Wash the Dog");
+		
+		
+		System.out.println("New Task Order: ");
+		//nested if to output Tasks based on priority order Lower number is higher in priority
+		if ((t1.getPriority() < t2.getPriority()) && (t1.getPriority() < t3.getPriority())) {
+			
+			System.out.println(t1);
+			
+			if(t2.getPriority() < t3.getPriority()){
+			System.out.println(t2);
+			System.out.println(t3);
+			}	
+			else{
+				System.out.println(t3);
+				System.out.println(t2);
+			}
+				
+		}
+		else if (t2.getPriority() < t3.getPriority()){
+				System.out.println(t2);
+				
+				if (t1.getPriority() < t3.getPriority()){
+				
+				System.out.println(t1);
+				System.out.println(t3);
+				}
+				else{
+					System.out.println(t3);
+					System.out.println(t1);
+				}
+		}		
+		else {
+			System.out.println(t3);
+			if (t1.getPriority() < t2.getPriority()){
+				
+			System.out.println(t1);
+			System.out.println(t2);
+			}
+			else{
+				System.out.println(t2);
+				System.out.println(t1);
+			}	
+			
+		}//end of Nested if
+	
+		
+
+	}//end of main
+
+}//end of TaskDriver class
+/*Idea that I had to have the user input the tasks...still working out the bugs
+// Scanner to read in tasks and priorities, output the list of tasks in order by priority
+int taskNum;
+String taskTemp;
+int priorityTemp;
+ArrayList<Task> listOfTasks = null;
+
+Scanner stdin = new Scanner(System.in);
+
+System.out.println("How many tasks do you have?");
+taskNum = stdin.nextInt();
+
+for(int i = 0; i < taskNum; i++){	
+	
+	System.out.print("Enter the task: ");
+	taskTemp = stdin.nextLine();
+	System.out.println();
+	
+	System.out.print("Enter the task priority: ");
+	priorityTemp = stdin.nextInt();
+	System.out.println();
+	
+	listOfTasks.add(i, new Task(taskTemp, priorityTemp));
+		
+}//end for loop
+
+System.out.println(listOfTasks);
+*/

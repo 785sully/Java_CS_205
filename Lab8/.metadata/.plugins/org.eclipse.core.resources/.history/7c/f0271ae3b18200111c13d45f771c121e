@@ -1,0 +1,51 @@
+/**************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 8.1
+ * CountIntegers.java
+ *
+ */
+import java.util.Scanner;;
+
+public class CountIntegers {
+
+	
+	public static void main(String[] args) {
+		// TODO read arbitrary numbers
+		
+		Scanner stdin = new Scanner (System.in);
+		final int MAXINT = 50;
+		final int MININT = 0;
+		int[] numlist = new int[MAXINT +1];
+		
+		//set the values to 0 to avoid output error
+		for (int i = 0; i<numlist.length; i++){
+			numlist[i] = 0;
+		}
+		
+		System.out.print("Enter any number in the range of 0-50, enter a negative number to stop: " + "\n"
+						+ "First Number: ");
+		
+		int value = Integer.parseInt(stdin.next());
+		
+		while (value >= MININT && value <= MAXINT){
+			numlist[value] = numlist[value] +1;
+			
+			System.out.print("Next Number: ");
+			value = Integer.parseInt(stdin.next());
+			
+		}//end of while loop
+		
+		//the output after they have entered a value outside of the range
+		System.out.println("Results" + "\n"
+						 + "********" + "\n" 
+						 +	"Number : # of times entered");
+		for (int i=0; i<numlist.length; i++){
+			if(numlist[i] > 0)
+				System.out.print(i + ": " + numlist[i] + "\n");
+		}
+
+	}//end of main method
+
+}//end of CountIntegers class

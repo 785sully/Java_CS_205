@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;8/src/LLBank.java&apos; to &apos;LLBankDriver.java&apos;" description="Rename resource &apos;LLBank.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/LLBank.java" name="LLBankDriver.java" stamp="1336616880461" updateReferences="true"/>
+</session>

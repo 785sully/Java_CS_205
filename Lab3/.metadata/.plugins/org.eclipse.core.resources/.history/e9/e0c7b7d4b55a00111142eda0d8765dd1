@@ -1,0 +1,85 @@
+/**********************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * 
+ * Hilo.Java
+ * 
+ * class that simulates a Slot Machine
+ *
+ */
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class Hilo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Slot machine three numbers 0-9 random printed side by side
+		// check for two match or three match
+		// run until the user quits
+		/** make
+		// random number generator
+		// Scanner to take input to quit
+		 * 
+		 * 
+		 */
+		
+		int slotNum1 = 0;
+		int slotNum2 = 0;
+		int slotNum3 = 0;
+		String quitChar = "y";
+		
+		Random randomInt = new Random();
+		Scanner stdin	= new Scanner(System.in);
+		
+		
+		//Start the loop that keeps going until the user quits by entering y or Y
+		do
+		{
+			System.out.print("Slot Machine Results: ");
+			System.out.print((slotNum1 = randomInt.nextInt(9) + 1) + ", ");//generates first number and assigns it to variable
+			System.out.print((slotNum2 = randomInt.nextInt(9) + 1) + ", ");//second number
+			System.out.println(slotNum3 = randomInt.nextInt(9) + 1);//third number
+			
+			//Check for number matching
+			if (slotNum1==slotNum2 && slotNum2==slotNum3)
+			{
+				System.out.println("Congratulations!! You matched three numbers!!");
+			}
+			else if(slotNum1==slotNum2 || slotNum1==slotNum3 || slotNum2==slotNum3)
+			{
+				System.out.println("Congratulations!! You matched two numbers!!");
+			}
+			
+			
+			System.out.print("Do you want to play again? (y or n): ");
+			quitChar = stdin.next();
+			System.out.println();//create some space between games
+			
+			
+			if (!quitChar.equals("y") || !quitChar.equals("Y") || !quitChar.equals("n") || !quitChar.equals("N")  )//getting fancy and error checking for input that doesn't match what we asked for
+			{
+				System.out.println("I'm sorry I didn't understand what you typed.");
+				System.out.print("Do you want to play again? (y or n): ");
+				quitChar = stdin.next();
+				System.out.println();
+				if (quitChar.equals("y") || quitChar.equals("Y") || quitChar.equals("n") || quitChar.equals("N")  )
+					break;
+				else
+					continue;
+				
+			}
+		}
+		while(quitChar.equals("y") || quitChar.equals("Y"));
+		
+		
+		System.out.print("Thanks for playing.");//prints this after the user quits
+		
+
+	}//end of main
+
+}//end of Hilo class

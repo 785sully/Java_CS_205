@@ -1,0 +1,96 @@
+/********************************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Project 1
+ *
+ ********************************************/
+
+import javax.swing.JOptionPane;
+
+public class FestivalAdmission {
+
+
+    
+    
+	public static void main(String[] args) {
+		/* ToDo: 
+		 * 1. Create 3 input Dialog boxes 
+		 * 2. Update 5 running totals:
+		 * Child Limit
+		 * Adult Limit
+		 * Senior Limit
+		 * Total people limit
+		 * 3.Make a while loop to update the totals
+		 * and print to both dialog box and Console
+		 * 
+		 */
+		//Project provided constants
+		final int CHILD_LIMIT = 50;
+	    final int ADULT_LIMIT = 200;
+	    final int SENIOR_LIMIT = 100;
+	    final int TOT_LIMIT = 300;
+	    final double GRAND_AMT = 2500.00;
+	    final double TICKET = 10.00;
+	    
+		
+		//stores user input from dialog box
+		String numStr;
+		String message;
+		
+		//stores the Ints after parsing
+		int numChildren = 0;
+		int numAdults = 0;
+		int numSeniors = 0;
+		
+		int totalPeople = 0;
+		
+		
+		//Welcome Message Dialog box added variables to message for easier updating
+		message = "Adult ticket is $" + TICKET + "\n" +
+				"seniors 10% discount, Children 50% discount \n" +
+				"Number Children Limit is " + CHILD_LIMIT + ", Number Adult Limit is " + ADULT_LIMIT +"\n" +
+				"Number Senior Limit is " + SENIOR_LIMIT + ", Total Visitors Limit is " + TOT_LIMIT + "\n" +
+				"Limit Grand Amount is $" + GRAND_AMT;
+				
+		JOptionPane.showMessageDialog(null, message);
+		
+		//Beginning of flag-controlled while loop
+		//stops program if any of the user supplied input exceeds the limit
+		do 
+		{
+			
+			
+			// Children input Box
+			numStr = JOptionPane.showInputDialog(
+					"Welcome to Fall Fesitval Please enter the number of children in your party:");
+			numChildren = Integer.parseInt(numStr);
+				
+			// Adults input Box
+			numStr = JOptionPane.showInputDialog(
+						"Please enter the number of adults in your party:");
+			numAdults = Integer.parseInt(numStr);
+			
+			// Seniors input Box
+			numStr = JOptionPane.showInputDialog(
+						"Please enter the number of seniors in your party:");
+			numSeniors = Integer.parseInt(numStr);
+			
+			//Sends Report to Console
+					
+				
+		}
+		while(numChildren <= CHILD_LIMIT && 
+				numAdults <= ADULT_LIMIT &&
+				numSeniors <= SENIOR_LIMIT &&
+				totalPeople <= TOT_LIMIT );
+		
+		//Totals Message Box
+			
+		//Prints Final Report
+			
+			
+
+	}//end of main
+
+}//end of FestivalAdmission Class

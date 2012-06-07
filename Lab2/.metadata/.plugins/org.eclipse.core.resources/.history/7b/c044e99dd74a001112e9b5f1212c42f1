@@ -1,0 +1,19 @@
+/*****************************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Lab 02
+ * PP 3.3
+ *
+ *****************************************/
+public class PhoneNumber {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

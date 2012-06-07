@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+/Users/world/Documents/Java205/Lab8/.metadata/.plugins/org.eclipse.jdt.core

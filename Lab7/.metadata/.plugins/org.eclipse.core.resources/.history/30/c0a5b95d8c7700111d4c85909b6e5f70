@@ -1,0 +1,39 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 7.5
+ * Task.java
+ *
+ */
+
+public class Task implements Priority{
+	
+	private String taskItem;
+	private int priority;
+	
+	//Constructor
+	public Task(String taskItem, int priority){
+		
+		this.priority = priority;
+		this.taskItem = taskItem; 
+		
+		
+	}//end of constructor
+	
+	
+	
+	
+	//Priority interface methods
+	public void setPriority(int priority){
+		
+		this.priority = priority
+		
+	}
+	public int getPriority(){
+		
+		return priority
+		
+	}
+
+}//end of Task class

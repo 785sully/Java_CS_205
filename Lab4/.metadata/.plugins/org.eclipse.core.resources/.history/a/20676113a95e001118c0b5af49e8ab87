@@ -1,0 +1,38 @@
+/********************
+ * 
+ * @author Josh Lake
+ * 
+ * CS 205
+ * Vowels.java
+ * PP6.9
+ * Reads String from stdin outputs the vowel count from that string
+ *
+ *******************/
+import java.util.Scanner;
+
+public class Vowels {
+
+	public static void main(String[] args) {
+		
+		int counterA = 0;
+		int counterE = 0;
+		int counterI = 0;
+		int counterO = 0;
+		int counterU = 0;
+		
+		String userinput = "";
+		
+		Scanner stdin = new Scanner(System.in);
+		
+		userinput = stdin.next();
+		
+		while(){//checks for more of the string
+		switch(/*next char? how get that?*/){
+				case (a || A):
+				
+		
+		}
+
+	}
+
+}

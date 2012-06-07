@@ -1,0 +1,40 @@
+/*******************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 8.6
+ * LLBank.Java
+ *
+ */
+public class LLBank {
+	
+	final int MAX = 30; //max number of customers
+	final double INTEREST = 1.03; //3% interest
+	static int count = 0;
+	LLBankCustomer[] customers = new LLBankCustomer[0];
+	
+	
+	//Constructor
+	public LLBank(){
+		
+		System.out.println("Creating new Account.");
+		
+		
+		count++;
+	}//end of Constructor
+	
+	
+	public void withdrawl(){
+		
+	}//end of withdrawl method
+	
+	public void deposit(){
+		
+	}//end of deposit method
+	
+	@override
+	public String toString(){
+		
+	}//end of toString override method
+
+}//end of LLBank Class

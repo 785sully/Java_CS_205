@@ -1,0 +1,25 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS205
+ * Balloons.java
+ * Constructs Various Colored balloons w/ a string attached
+ *
+ */
+
+import javax.swing.JApplet;
+import java.awt.*;
+
+public class Balloons extends JApplet{
+	
+	public void paint (Graphics page){
+	
+	final int MAX_NUMBER = 10; //maximum used for random number of balloons
+	
+	setBackground (Color.cyan);
+	
+	
+	
+	}//end of paint
+	
+}//end of Balloons class

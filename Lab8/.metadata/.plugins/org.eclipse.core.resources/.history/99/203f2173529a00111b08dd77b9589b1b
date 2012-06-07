@@ -1,0 +1,30 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * BattleEngine.java
+ * 
+ * This class is used to allow the creature objects to fight each other
+ *
+ */
+public class BattleEngine {
+	
+	//(String name, int health, int attackStrength, int armorLevel, int level, int weaponLevel)
+	Warrior noobWarrior = new Warrior("noob", 50, 2, 13, 7, 1);
+	//String name, int health, int attackStrength, int gold, int treasureLevel)
+	GreenSlime greenSlime = new GreenSlime("Slimer", 20, 6, 14, 1);
+	
+	fight(noobWarrior, greenSlime);
+
+
+
+//Battle, fight two people against each other, return values for the setText
+//use the game driver for the frame,
+
+public void fight(Warrior good, GreenSlime bad){//creatures take turns attacking, does order matter?
+	
+	bad.setHealth(bad.getHealth()-good.attack());//reduces bad's health by good's attack
+	good.setHealth(good.getHealth()-(bad.attack()-good.getArmorLevel())); //reduces good's health by bad's attack minus good's armor level
+	
+}//end of fight method
+}//end of BattleEngine class

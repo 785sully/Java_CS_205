@@ -1,0 +1,17 @@
+/******************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 4.5
+ * Book.java
+ * Creates the Book Object will all getter/setter methods
+ *
+ */
+public class Book {
+	
+	private String title;
+	private String author;
+	private String publisher;
+	private int copyrightDate;
+
+}//end of Book class

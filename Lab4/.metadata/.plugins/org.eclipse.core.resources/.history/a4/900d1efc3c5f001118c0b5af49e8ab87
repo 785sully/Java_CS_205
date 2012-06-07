@@ -1,0 +1,16 @@
+/**
+ * @author Josh Lake
+ * CS 205
+ * PP 4.5
+ * BookShelf.java
+ * Driver class for Book object
+ *
+ */
+public class BookShelf {
+
+	public static void main(String[] args) {
+		// make several book objects and update them
+
+	}
+
+}

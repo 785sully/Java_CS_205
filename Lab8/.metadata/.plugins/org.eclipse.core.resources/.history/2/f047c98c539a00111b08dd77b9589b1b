@@ -1,0 +1,87 @@
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Final Project
+ * GameDriver.java
+ * 
+ * Uses the Battle class to have a few of the creature objects fight each other.
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class GameDriver extends JFrame{
+	
+	//constructor
+	GameDriver(){
+		setTitle("Dungeon Battle");
+		setLayout(new BorderLayout());
+		setSize(400, 150);
+		Container contentPane = getContentPane();
+		
+		//top panel has both creature info
+		//left section and right section
+		//each section has:
+		//Name
+		//Health
+		topPanel = new JPanel(new FlowLayout());
+		
+		
+		
+		
+		//middlePanel has the "Fight button"
+		middlePanel = new JPanel(new FlowLayout());
+		fight = new JButton("Fight");
+		ButtonListener listener = new ButtonListener();
+		fight.addActionListener(listener);
+		
+		//bottomPanel displays the winner of the battle
+		bottomPanel = new JPanel(new FlowLayout());
+		
+		
+	}//end of constructor
+	static JPanel topPanel;
+	static JPanel middlePanel;
+	static JPanel bottomPanel;
+	static JButton fight;
+	static JTextField productCode;
+	static JTextField price;
+	static JTextField quantityOnHand;
+	static JTextField status;
+	
+
+	static BattleEngine battleEngine;
+	
+	public static void main(String[] args) {
+		
+		battleEngine = new BattleEngine();
+		
+		//instantiate window
+		JFrame  frame = new GameDriver();
+		frame.setVisible(true);
+
+	}//end of main
+	//listener for the "fight" button
+	//change for the variables for this class
+	private class ButtonListener implements ActionListener{
+		public void actionPerformed(ActionEvent event){
+			if(event.getSource() == fight){
+				//call the fight() method
+				//track Each creature's health
+				//post results to the window after each click
+			
+				
+				
+			}//end of if "fight button"
+		}//end actionPerfomed
+	}//end ButtonListener class
+	
+}//end of GameDriver class

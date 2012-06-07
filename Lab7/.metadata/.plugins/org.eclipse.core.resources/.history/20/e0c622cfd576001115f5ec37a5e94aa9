@@ -1,0 +1,35 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 7.2
+ * Student2.java
+ *
+ */
+
+
+public class Student2 {
+	
+	private String firstName, lastName;
+	private Address homeAddress, schoolAddress;
+	private int test1, test2, test3;
+	
+	//constructor
+	public Student2 (String first, String last, Address home, Address school, int firstTest, int secondTest, int thirdTest){
+		
+		firstName = first;
+		lastName = last;
+		homeAddress = home;
+		schoolAddress = school;
+		test1 = firstTest;
+		test2 = secondTest;
+		test3 = thirdTest;
+	}//end of constructor
+	
+	public String toString(){
+		String result;
+		
+		result = 
+	}
+
+}//end of Student2 class

@@ -1,0 +1,19 @@
+/*****************************************
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Lab 02
+ * PP 3.4
+ *
+ *****************************************/
+public class Distance {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

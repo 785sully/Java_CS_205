@@ -1,0 +1,111 @@
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * Final Project
+ * GameDriver.java
+ * 
+ * Uses the Battle class to have a few of the creature objects fight each other.
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class GameDriver extends JFrame{
+	
+	//constructor
+	GameDriver(){
+		setTitle("Dungeon Battle");
+		setLayout(new BorderLayout());
+		setSize(400, 150);
+		Container contentPane = getContentPane();
+		
+		//top panel has both creature info
+		//left section and right section
+		//each section has:
+		//Name
+		//Health
+		topLeftPanel = new JPanel(new FlowLayout());
+		leftName = new JLabel("   X  ");
+		leftHealth = new JLabel("  X ");
+		topLeftPanel.add(leftName);
+		topLeftPanel.add(leftHealth);
+		
+		
+		topRightPanel = new JPanel(new FlowLayout());
+		rightName = new JLabel("    Y ");
+		rightHealth = new JLabel("   Y  ");
+		topRightPanel.add(rightName);
+		topRightPanel.add(rightHealth);
+		
+		
+		//middlePanel has the "Fight button"
+		middlePanel = new JPanel(new BorderLayout());
+		fight = new JButton("Fight");
+		fight.setPreferredSize(40,40);
+		ButtonListener listener = new ButtonListener();
+		fight.addActionListener(listener);
+		middlePanel.add(fight, BorderLayout.CENTER);
+		
+		//bottomPanel displays the winner of the battle
+		bottomPanel = new JPanel(new BorderLayout());
+		leftWinner = new JLabel("    WIV ");
+		rightWinner = new JLabel("     ");
+		bottomPanel.add(leftWinner, BorderLayout.WEST);
+		bottomPanel.add(rightWinner, BorderLayout.EAST);
+		
+		
+		//contentPane
+		contentPane.add(topLeftPanel, BorderLayout.WEST);
+		contentPane.add(topRightPanel, BorderLayout.EAST);
+		contentPane.add(middlePanel, BorderLayout.CENTER);
+		contentPane.add(bottomPanel, BorderLayout.SOUTH);
+		
+	}//end of constructor
+	static JPanel topLeftPanel;
+	static JPanel topRightPanel;
+	static JPanel middlePanel;
+	static JPanel bottomPanel;
+	static JButton fight;
+	static JLabel leftName;
+	static JLabel rightName;
+	static JLabel leftHealth;
+	static JLabel rightHealth;
+	static JLabel leftWinner;
+	static JLabel rightWinner;
+	
+
+	static BattleEngine battleEngine;
+	
+	public static void main(String[] args) {
+		
+		battleEngine = new BattleEngine();
+		
+		//instantiate window
+		JFrame  frame = new GameDriver();
+		frame.setVisible(true);
+
+	}//end of main
+	//listener for the "fight" button
+	//change for the variables for this class
+	private class ButtonListener implements ActionListener{
+		public void actionPerformed(ActionEvent event){
+			if(event.getSource() == fight){
+				//call the fight() method
+				//track Each creature's health
+				//post results to the window after each click
+			
+				
+				
+			}//end of if "fight button"
+		}//end actionPerfomed
+	}//end ButtonListener class
+	
+}//end of GameDriver class

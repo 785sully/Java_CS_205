@@ -1,0 +1,17 @@
+/**
+ * 
+ * @author Josh Lake
+ * CS 205
+ * PP 7.5
+ * Task.java
+ *
+ */
+
+public class Task {
+	
+	//Constructor
+	public Task(){
+		
+	}//end of constructor
+
+}//end of Task class
